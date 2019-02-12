@@ -5,9 +5,11 @@
   "main": "server.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node ./src/server.ts",
+    "dev": "nodemon --watch src/**/*.ts --ignore src/**/*.spec.ts --exec ts-node src/server.ts",
     "start": "nodemon ./dist/src/server.js",
-    "prod": "npm run build && npm run start"
+    "prod": "npm run build && npm run start",
+    "watch": "npm-watch"
+
   },
   "keywords": [],
   "author": "",
